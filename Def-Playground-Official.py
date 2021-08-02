@@ -12,7 +12,7 @@ def profile(name, lastname, age, gender, grade, birthday):
 allstats = []
 count = 0
 list = 0
-
+amountpro = 0
 num_profiles = int(input("How Many Profiles Would You like To Make?:   "))
 
 for count in range(num_profiles):
@@ -24,6 +24,7 @@ for count in range(num_profiles):
         entergender = (input("Please enter their gender here:    "))
         entergrade = (input("Please enter their grade here:    "))
         enterbday = (input("Please enter their birthday this year here; Please put it in this format > <month>/<date>/<last 2 digits of current year> (e.g: 03/09/21):   "))
+        amountpro =+1
         if todaydate == enterbday:
             print(f""" Wow!! {entername} {enterlastname} I can't believe it! Today is your birthday!! Happy Birthday and Good Wishes to You on turning {enterage} year(s) old!
              ^____^     
