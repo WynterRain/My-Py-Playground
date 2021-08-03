@@ -2,7 +2,10 @@
 from datetime import date
 
 today = date.today()
-todaydate = today.strftime("%m/%d/%y")
+todaydate = str(today.strftime("%m/%d/%y"))
+todaychrsize = len(todaydate)
+rmyrs = todaydate[:todaychrsize -3]
+#print(rmyrs)
 
 
 def profile(name, lastname, age, gender, grade, birthday):
@@ -33,7 +36,7 @@ for count in range(num_profiles):
         entergrade = (input("Please enter their grade here:    "))
         enterbday = (input("Please enter their birthday this year here; Please put it in this format > <month>/<date>/<last 2 digits of current year> (e.g: 03/09/21):   "))
         amountpro =+1
-        if todaydate == enterbday: # if date matches todays date it will give this little surprise
+        if enterbday.startswith(rmyrs): # if date matches todays date it will give this little surprise
             print(f""" Wow!! {entername} {enterlastname} I can't believe it! Today is your birthday!! Happy Birthday and Good Wishes to You on turning {enterage} year(s) old!
              ^____^     
             (｡･ω･｡)つ━☆・*。
