@@ -12,7 +12,7 @@ def profile(name, lastname, age, gender, grade, birthday):
 allstats = []
 count = 0
 list = 0
-amountpro = 0
+amountpro = 0 
 num_profiles = int(input("How Many Profiles Would You like To Make?:   "))
 
 for count in range(num_profiles):
