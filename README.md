@@ -30,7 +30,7 @@ Nope! No where close;
 
 | Name / Username | Link | App / Site |
 | --- | ---| --- |
-| Nelli#9297 | (N/A) | Discord
-| Asterbubbletea | [asterbubbletea] (https://instagram.com/asterbubbletea) | Instagram
-| SnowiWatermelon | [SnowiWatermelon] (https://scratch.mit.edu/SnowiWatermelon)
+| WinterRain#9297 | (N/A) | Discord
+| WynterRain_ | (WynterRain_)[https://www.instagram.com/wynterrain_] | Instagram
+| WinterRain- | (WinterRain-)[https://scratch.mit.edu/users/WinterRain-/] | Scratch
 
