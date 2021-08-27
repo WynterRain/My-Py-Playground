@@ -18,7 +18,9 @@ birthday -- person's birthday
 """
 
 
-def profile_categories(name, lastname, age, gender, grade, birthday):
+def profile_categories(
+                       name, lastname, age, 
+                       gender, grade, birthday):
     welcome_profile = ("Hello " + name + "! This is your profile statistics!    " 
                        "First Name   : " + name 
                        + "| Last Name   : " + lastname 
