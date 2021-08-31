@@ -20,14 +20,16 @@ birthday -- person's birthday
 
 def profile_categories(
                        name, lastname, age, 
-                       gender, grade, birthday):
+                       gender, grade, birthday,
+                       ):
     welcome_profile = ("Hello " + name + "! This is your profile statistics!    " 
                        "First Name   : " + name 
                        + "| Last Name   : " + lastname 
                        + "| Age     : " + age 
                        + "| Gender    : " + gender 
                        + "| Grade   : " + grade 
-                       + "| Birthday   : " + birthday)
+                       + "| Birthday   : " + birthday,
+                       )
     return welcome_profile
 
 
@@ -37,24 +39,25 @@ profile_counter = 0
 
 amount_of_created_profiles = 0 
 
-num_profiles = int(input("How Many Profiles Would You like To Make?:   "))
+num_profiles = int(input,
+                   ("How Many Profiles Would You like To Make?:   "))
 
 
 for profile_counter in range(num_profiles): 
 
     start_answer = input("Would you like to make a new profile? Please enter y/n:  ")
     if start_answer.lower().startswith("y"): # checks if input begins with 'y'
-        name_input = (input
+        name_input = (input,
                       ("Please enter their first name here:    "))
-        last_name_input = (input
+        last_name_input = (input,
                            ("Please enter their last name here:    "))
-        age_input = (input
+        age_input = (input,
                      ("Please enter their age here:    "))
-        gender_input = (input
+        gender_input = (input,
                         ("Please enter their gender here:    "))
-        grade_input = (input
+        grade_input = (input,
                        ("Please enter their grade here:    "))
-        birthdate_input = (input
+        birthdate_input = (input,
                            ("Please enter their birthday this year here; Please put it in this format > <month>/<date>/<last 2 digits of birth year> (e.g: 03/09/21):   "))
         amount_of_created_profiles =+1
         
@@ -74,7 +77,8 @@ for profile_counter in range(num_profiles):
                                  age_input, 
                                  gender_input, 
                                  grade_input, 
-                                 birthdate_input))
+                                 birthdate_input,
+                                 ))
         profile_counter =+ 1 
         print("~ ~ ~ ~ ~ ~ ~ ~ ~ ~")
         print("You have made", profile_counter , "profile(s)")
