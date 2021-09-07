@@ -5,9 +5,9 @@ detect = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 imp_img = cv2.VideoCapture("E.Musk.jpg")
 
 res, img = imp_img.read()
-# gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-# faces = detect.detectMultiScale(gray, 1.3, 5)
+faces = detect.detectMultiScale(gray, 1.3, 5)
 
 cv2.imshow("Elon Musk Image", img)
 
