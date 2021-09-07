@@ -1,20 +1,17 @@
-import cv2
+from typing import final
+import cv2, glob
 
-
+all_images = glob.glob("*.jpg")
 detect = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
-imp_img = cv2.VideoCapture("M.Zuckerberg2.jpg")
 
-res, img = imp_img.read()
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-faces = detect.detectMultiScale(gray, 1.3, 5)
-
-for (x, y, w, h) in faces:
-    cv2.rectangle(img, (x, y), (x+w, y+h), (255, 255, 0), 2)
+for image in all_images:
+    img = cv2.imread(image)
+    gray_img = cv2.imread(image)
+    faces = detect.detectMultiScale(gray_img, scaleFactor=1.1, minNeighbors=5)
     
-
-cv2.imshow("Elon Musk Image", img)
-
-cv2.waitKey(0)
-imp_img.release()
-cv2.destroyAllWindows()
+    for (x,y,w,h) in faces:
+        final_img = cv2.rectangle(img, (x,y), (x+w, y+h), (0, 255, 0), 2)
+        
+    cv2.imshow("Face Detection", final_img)
+    cv2.waitKey(2000)
+    cv2.destroyAllWindows()
