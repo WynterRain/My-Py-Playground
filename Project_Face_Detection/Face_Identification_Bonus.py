@@ -1,4 +1,4 @@
-from typing import final
+
 import cv2, glob
 
 all_images = glob.glob("*.jpg")
