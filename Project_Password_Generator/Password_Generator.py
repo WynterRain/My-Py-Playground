@@ -8,3 +8,6 @@ import random
     # picks a random integer from a range of numbers
     # e.g. print(random.randint(<min #>,<max #>)) 
     
+# random.random()
+    # picks a random floating number from 0.0 to 1.0
+    # e.g. print(random.random())
