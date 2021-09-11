@@ -24,4 +24,9 @@ lower_chracter = ['a','b','c','d','e']
 numbers = ['1', '2', '3', '4', '5']
 special_characters = ['@', '#', '^', '&', '!']
 
-password = random.choice(upper_character) + random.choice(lower_chracter) + random.choice(numbers) + random.random.choice(special_characters)
+password = (
+            random.choice(upper_character) 
+            + random.choice(lower_chracter) 
+            + random.choice(numbers) 
+            + random.random.choice(special_characters)
+            )
