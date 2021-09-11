@@ -22,7 +22,7 @@ rand_word = (random.choice(word_list))
 rand_special_character = random.choice(special_characters)
 rand_num = str(random.randint(10,99))
 readable_password = (
-                    + rand_word 
+                    rand_word 
                     + rand_special_character 
                     + rand_num
                     )
