@@ -18,3 +18,9 @@ import random
 # 1+ Lower Character
 # 1+ Numberic Digit
 # 1+ Special Symbol( ! @ # $ % ^ & * ( ) + - = _ ~ )
+
+upper_character = ['A', 'B', 'C', 'D', 'E']
+lower_chracter = ['a','b','c','d','e']
+numbers = [1, 2, 3, 4, 5]
+special_characters = ['@', '#', '^', '&', '!']
+
