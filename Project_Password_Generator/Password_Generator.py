@@ -11,3 +11,10 @@ import random
 # random.random()
     # picks a random floating number from 0.0 to 1.0
     # e.g. print(random.random())
+    
+# Strong Password Requirements :
+# 8+ Character Length
+# 1+ Upper Character
+# 1+ Lower Character
+# 1+ Numberic Digit
+# 1+ Special Symbol( ! @ # $ % ^ & * ( ) + - = _ ~ )
