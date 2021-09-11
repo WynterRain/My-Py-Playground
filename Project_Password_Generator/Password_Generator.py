@@ -34,3 +34,5 @@ password = (
             + random.choice(numbers) 
             + random.random.choice(special_characters)
             )
+
+print(password)
