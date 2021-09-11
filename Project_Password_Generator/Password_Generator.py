@@ -29,4 +29,8 @@ password_p1 = (
             + random.choice(lower_chracter) 
             + random.choice(numbers) 
             + random.random.choice(special_characters)
+            + random.choice(upper_character) 
+            + random.choice(lower_chracter) 
+            + random.choice(numbers) 
+            + random.random.choice(special_characters)
             )
