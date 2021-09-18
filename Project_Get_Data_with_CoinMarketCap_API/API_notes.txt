@@ -24,3 +24,21 @@ HTTPS Request Methods
     - Used to request data from a specified resource
 - Post
     - Used to send data to a server to create / update a resource. 
+
+API Response Format 
+Both produce the exact same information, just different format.
+
+- Beautify
+    More organized, more like .json kind of format
+    If you want the Beautify format to become Minify use "https://codebeautify.org/jsonviewer"
+        1 Copy Text
+        2 Paste Text On the Left Side In The Link
+        3 Click Minify button
+        4 Results should pop up on the right hand side
+- Minify
+    Info in a big chuncky text is Minify
+    If you want Minify format to become Beautify use "https://codebeautify.org/jsonviewer"
+        1 Copy Text
+        2 Paste Text On the Left Side In The Link
+        3 Click Beautify button
+        4 Results should pop up on the right hand side
