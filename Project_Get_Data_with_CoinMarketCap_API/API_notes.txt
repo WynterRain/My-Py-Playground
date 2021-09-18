@@ -1,1 +1,14 @@
 API = Application Programming Interface
+
+API Example:
+- You are at a restaurant
+- You order your favorite dishes from the waiter who gets them from a kitchen.
+
+Waiter = API
+- Waiter takes your request and outputs the food that you ordered.
+What You Order = Request
+Your Food = Response
+Kitchen Store Room = Database
+Restaurant = Internet
+You / Customer = Client
+Kitchen = Server
