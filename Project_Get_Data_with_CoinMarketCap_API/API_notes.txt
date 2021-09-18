@@ -42,3 +42,8 @@ Both produce the exact same information, just different format.
         2 Paste Text On the Left Side In The Link
         3 Click Beautify button
         4 Results should pop up on the right hand side
+
+CoinMarketCap Details
+Name : WinterRain
+Password : C01nHe0naL1u
+API Key : b2836bb2-a6a2-45e3-80a7-14a3810fe1e6
