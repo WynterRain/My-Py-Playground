@@ -18,3 +18,9 @@ Application / Client
     API Requests
         Server / Data Source
             API Response 
+
+HTTPS Request Methods
+- Get
+    - Used to request data from a specified resource
+- Post
+    - Used to send data to a server to create / update a resource. 
