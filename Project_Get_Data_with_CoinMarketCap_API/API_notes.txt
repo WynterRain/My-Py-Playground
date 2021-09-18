@@ -12,3 +12,9 @@ Kitchen Store Room = Database
 Restaurant = Internet
 You / Customer = Client
 Kitchen = Server
+
+How API Works
+Application / Client 
+    API Requests
+        Server / Data Source
+            API Response 
