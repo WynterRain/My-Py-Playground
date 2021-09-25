@@ -5,4 +5,5 @@ api_request = requests.get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/
 
 api = json.loads(api_request.content)
 
-print(api)
+print(api["data"][0]["symbol"])
+print(api["data"][0]["quote"]["USD"]["price"])
