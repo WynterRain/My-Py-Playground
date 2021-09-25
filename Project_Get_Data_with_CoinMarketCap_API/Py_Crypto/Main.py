@@ -6,4 +6,5 @@ api_request = requests.get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/
 api = json.loads(api_request.content)
 
 print(api["data"][0]["symbol"])
-print(api["data"][0]["quote"]["USD"]["price"])
+print("{0:.2f}".format(api["data"][0]["quote"]["USD"]["price"]))
+# ("{0:.2f}".format -- reformats the output to be 2 decimals
