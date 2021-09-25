@@ -5,11 +5,22 @@ api_request = requests.get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/
 
 api = json.loads(api_request.content)
 
-invested_coins = ["BTC", "BNS"]
+invested_coins = [
+    {
+      "symbol" : "BTC",
+      "amount_owned" : 2,
+      "price_per_coin": 3200
+    },
+    {
+      "symbol" : "BNB",
+      "amount_owned" : 100,
+      "price_per_coin": 2.05
+    }
+]
 
 for index in range(0,5):
     for coin in invested_coins:
-        if api["data"][index]["symbol"] == coin:
+        if api["data"][index]["symbol"] == coin["symbol"]:
             print(api["data"][index]["symbol"])
             print("{0:.2f}".format(api["data"][index]["quote"]["USD"]["price"]))
             # ("{0:.2f}".format -- reformats the output to be 2 decimals
