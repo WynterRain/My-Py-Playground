@@ -8,7 +8,9 @@ api = json.loads(api_request.content)
 invested_coins = ["BTC", "BNS"]
 
 for index in range(0,5):
-    print(api["data"][index]["symbol"])
-    print("{0:.2f}".format(api["data"][index]["quote"]["USD"]["price"]))
-    # ("{0:.2f}".format -- reformats the output to be 2 decimals
-    print("━━━━━━━☆☆━━━━━━━…‥・")
+    for coin in invested_coins:
+        if api["data"][index]["symbol"] == coin:
+            print(api["data"][index]["symbol"])
+            print("{0:.2f}".format(api["data"][index]["quote"]["USD"]["price"]))
+            # ("{0:.2f}".format -- reformats the output to be 2 decimals
+            print("━━━━━━━☆☆━━━━━━━…‥・")
