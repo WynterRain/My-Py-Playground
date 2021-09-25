@@ -5,6 +5,8 @@ api_request = requests.get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/
 
 api = json.loads(api_request.content)
 
+invested_coins = ["BTC", "EOS"]
+
 for index in range(0,5):
     print(api["data"][index]["symbol"])
     print("{0:.2f}".format(api["data"][index]["quote"]["USD"]["price"]))
