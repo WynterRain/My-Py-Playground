@@ -9,3 +9,6 @@ Libraries For GUI
 Basic GUI
     * Notepad
     * Calculator
+
+Python Document On Tkinter
+    * https://docs.python.org/3/library/tkinter.html
