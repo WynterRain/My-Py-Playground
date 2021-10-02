@@ -5,15 +5,6 @@ import json
 pycrypto = Tk()
 pycrypto.title("My Crypto Portfolio")
 
-name = Label(pycrypto, text="Bitcoin")
-name.pack()
-# pack moves button when resized ;; 
-    # can replace with name.grid(row=<row #>, column=<column #>) to be more specific
-
-
-pycrypto.mainloop()
-
-
 
 def my_portfolio():
 
@@ -62,3 +53,11 @@ def my_portfolio():
 
     print("━━━━━━━☆☆━━━━━━━…‥・")
     print("━━━━━━━☆☆━━━━━━━…‥・")
+    
+name = Label(pycrypto, text="Bitcoin")
+name.pack()
+# pack moves button when resized ;; 
+    # can replace with name.grid(row=<row #>, column=<column #>) to be more specific
+
+
+pycrypto.mainloop()
