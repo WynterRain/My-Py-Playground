@@ -54,6 +54,7 @@ def my_portfolio():
     print("━━━━━━━☆☆━━━━━━━…‥・")
     print("━━━━━━━☆☆━━━━━━━…‥・")
     
+
 name = Label(pycrypto, text="Bitcoin")
 name.pack()
 # pack moves button when resized ;; 
@@ -61,3 +62,5 @@ name.pack()
 
 
 pycrypto.mainloop()
+
+print("Program Completed")
