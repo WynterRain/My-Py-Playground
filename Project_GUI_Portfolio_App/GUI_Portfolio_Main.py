@@ -29,6 +29,7 @@ def my_portfolio():
     ]
 
     total_p_l = 0
+    coin_row = 1
 
     for index in range(0,5):
         for coin in invested_coins:
