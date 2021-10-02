@@ -55,8 +55,29 @@ def my_portfolio():
     print("━━━━━━━☆☆━━━━━━━…‥・")
     
 
-name = Label(pycrypto, text="Bitcoin")
-name.pack()
+name = Label(pycrypto, text="Coin Name", bg="black", fg="white")
+name.grid(row=0, column=0, sticky=N+S+E+W)
+
+price = Label(pycrypto, text="Price", bg="black", fg="white")
+price.grid(row=0, column=1, sticky=N+S+E+W)
+
+no_coins = Label(pycrypto, text="Coin Owned", bg="black", fg="white")
+no_coins.grid(row=0, column=2, sticky=N+S+E+W)
+
+total_paid = Label(pycrypto, text="Total Amount Paid", bg="black", fg="white")
+total_paid.grid(row=0, column=3, sticky=N+S+E+W)
+
+current_value = Label(pycrypto, text="Current Value", bg="black", fg="white")
+current_value.grid(row=0, column=4, sticky=N+S+E+W)
+
+p_l_coin = Label(pycrypto, text="P/L Per Coin", bg="black", fg="white")
+p_l_coin.grid(row=0, column=5, sticky=N+S+E+W)
+
+total_p_l = Label(pycrypto, text="Total P/L With Coin", bg="black", fg="white")
+total_p_l.grid(row=0, column=6, sticky=N+S+E+W)
+
+
+#name.pack()
 # pack moves button when resized ;; 
     # can replace with name.grid(row=<row #>, column=<column #>) to be more specific
 
