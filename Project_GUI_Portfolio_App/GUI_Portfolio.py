@@ -25,7 +25,7 @@ def my_portfolio():
         "price_per_coin": 3200 
     }, 
     {
-        "symbol":"BNB",
+        "symbol":"BTC",
         "amount_owned": 100,
         "price_per_coin": 2.05
     },
