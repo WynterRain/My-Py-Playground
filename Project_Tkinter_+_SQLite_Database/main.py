@@ -36,11 +36,11 @@ def my_portfolio():
 
     for i in range(0, 300):
         for coin in coins:
-            if api["data"][i]["symbol"] == coin["symbol"]:
-                total_paid = coin["amount_owned"] * coin["price_per_coin"]
-                current_value = coin["amount_owned"] * api["data"][i]["quote"]["USD"]["price"]
-                pl_percoin = api["data"][i]["quote"]["USD"]["price"] - coin["price_per_coin"]
-                total_pl_coin = pl_percoin * coin["amount_owned"]
+            if api["data"][i]["symbol"] == coin[1]:
+                total_paid = coin[2] * coin[3]
+                current_value = coin[2] * api["data"][i]["quote"]["USD"]["price"]
+                pl_percoin = api["data"][i]["quote"]["USD"]["price"] - coin[3]
+                total_pl_coin = pl_percoin * coin[2]
                 
                 total_pl = total_pl + total_pl_coin
                 total_current_value = total_current_value + current_value
@@ -51,7 +51,7 @@ def my_portfolio():
                 price = Label(pycrypto, text = "${0:.2f}".format(api["data"][i]["quote"]["USD"]["price"]), bg = "#B8A8A8", fg = "Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
                 price.grid(row = coin_row, column = 1, sticky = N + S + E + W)
 
-                no_coins = Label(pycrypto, text = coin["amount_owned"], bg = "#B8A8A8", fg = "Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
+                no_coins = Label(pycrypto, text = coin[2], bg = "#B8A8A8", fg = "Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
                 no_coins.grid(row = coin_row, column = 2, sticky = N + S + E + W)
 
                 amount_paid = Label(pycrypto, text = "${0:.2f}".format(total_paid), bg = "#B8A8A8", fg = "Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
@@ -110,7 +110,7 @@ totalpl.grid(row = 0, column = 6, sticky = N + S + E + W)
 my_portfolio()
 
 pycrypto.mainloop()
-print("Program Completed")
+# print("Program Completed")
 
 cursorObj.close()
 con.close()
