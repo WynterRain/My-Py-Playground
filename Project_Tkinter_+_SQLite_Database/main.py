@@ -9,6 +9,10 @@ pycrypto.title("My Crypto Portfolio")
 
 con = sqlite3.connect('coin.db')
 cursorObj = con.cursor()
+cursorObj.execute("CREATE TABLE IF NOT EXISTS coin(id INTEGER PRIMARY KEY, symbol TEXT, amount INTEGER, price REAL)")
+con.commit()
+
+
 
 def font_color(amount):
     if amount > 0:
