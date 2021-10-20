@@ -26,35 +26,15 @@ def my_portfolio():
     api = json.loads(api_request.content)
 
     
-    coins = [
-    {
-        "symbol":"ETH",
-        "amount_owned": 2,
-        "price_per_coin": 3200 
-    }, 
-    {
-        "symbol":"BTC",
-        "amount_owned": 100,
-        "price_per_coin": 2.05
-    },
-    {
-        "symbol":"LTC",
-        "amount_owned": 75,
-        "price_per_coin": 25
-    },
-    {
-        "symbol":"XMR",
-        "amount_owned": 10,
-        "price_per_coin": 40.05
-    }
-   ]
+    cursorObj.execute("SELECT * FROM coin")
+    coins = cursorObj.fetchall()
+    
     
     total_pl = 0
     coin_row = 1
     total_current_value = 0
 
     for i in range(0, 300):
-        
         for coin in coins:
             if api["data"][i]["symbol"] == coin["symbol"]:
                 total_paid = coin["amount_owned"] * coin["price_per_coin"]
