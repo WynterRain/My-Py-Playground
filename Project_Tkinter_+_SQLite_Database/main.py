@@ -7,6 +7,9 @@ pycrypto = Tk()
 pycrypto.title("My Crypto Portfolio")
 #pycrypto.iconbitmap("favicon.ico")
 
+con = sqlite3.connect('coin.db')
+cursorObj = con.cursor()
+
 def font_color(amount):
     if amount > 0:
         return "#4E9CB1"
@@ -124,3 +127,6 @@ my_portfolio()
 
 pycrypto.mainloop()
 print("Program Completed")
+
+cursorObj.close()
+con.close()
