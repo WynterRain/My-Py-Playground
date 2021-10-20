@@ -1,6 +1,7 @@
 from tkinter import *
 import requests 
 import json
+import sqlite3
 
 pycrypto = Tk()
 pycrypto.title("My Crypto Portfolio")
