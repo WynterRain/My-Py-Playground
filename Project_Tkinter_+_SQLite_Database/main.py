@@ -13,13 +13,6 @@ cursorObj.execute("CREATE TABLE IF NOT EXISTS coin(id INTEGER PRIMARY KEY, symbo
 con.commit()
 
 
-
-def font_color(amount):
-    if amount > 0:
-        return "#4E9CB1"
-    else:
-        return "#E2252B"
-
 def my_portfolio():
     
     api_request = requests.get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=300&convert=USD&CMC_PRO_API_KEY=b2836bb2-a6a2-45e3-80a7-14a3810fe1e6")
@@ -29,6 +22,12 @@ def my_portfolio():
     cursorObj.execute("SELECT * FROM coin")
     coins = cursorObj.fetchall()
     
+    def font_color(amount):
+        if amount > 0:
+            return "#4E9CB1"
+        else:
+            return "#E2252B"
+
     
     total_pl = 0
     coin_row = 1
