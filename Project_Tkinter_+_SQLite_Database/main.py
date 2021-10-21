@@ -28,6 +28,9 @@ def my_portfolio():
         else:
             return "#E2252B"
 
+    def insert_coin():
+        cursorObj.execute("INSERT INTO coin(symbol, price, amount) VALUES(?, ?, ?)", (symbol_txt.get(), price_txt.get(), amount_txt.get()))
+        con.commit()
     
     total_pl = 0
     coin_row = 1
@@ -71,6 +74,19 @@ def my_portfolio():
                 totalpl.grid(row = coin_row, column = 7, sticky = N + S + E + W)
                 
                 coin_row += 1
+                
+    # Insert Data
+    symbol_txt = Entry(pycrypto, borderwidth = 2, relief = "groove")
+    symbol_txt.grid(row = coin_row + 1, column = 1)
+    
+    price_txt = Entry(pycrypto, borderwidth = 2, relief = "groove")
+    price_txt.grid(row = coin_row + 1, column = 2)
+    
+    amount_txt = Entry(pycrypto, borderwidth = 2, relief = "groove")
+    amount_txt.grid(row = coin_row + 1, column = 3)
+    
+    add_coin = Button(pycrypto, text = "Add Coin".format(total_pl), bg = "#915858", fg = "#F3B6B6", command = insert_coin, font="Lato 12 bold", borderwidth = 2, relief = "groove", padx="2", pady="2")
+    add_coin.grid(row = coin_row + 1, column = 4, sticky = N + S + E + W)
 
     totalap = Label(pycrypto, text = "${0:.2f}".format(total_amount_paid), bg = "#B8A8A8", fg = "Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
     totalap.grid(row = coin_row, column = 4, sticky = N + S + E + W)
