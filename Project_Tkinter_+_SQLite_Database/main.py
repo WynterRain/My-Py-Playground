@@ -88,27 +88,30 @@ def my_portfolio():
    
             
             
-def app_header():            
+def app_header():
+    portfolio_id = Label(pycrypto, text = "Portfolio ID", bg = "#915858", fg = "#F3B6B6", font="Lato 12 bold", padx="5", pady="5", borderwidth = 2, relief = "groove" )
+    portfolio_id.grid(row=0, column = 0, sticky = N + S + E + W)
+                
     name = Label(pycrypto, text = "Coin Name", bg = "#915858", fg = "#F3B6B6", font="Lato 12 bold", padx="5", pady="5", borderwidth = 2, relief = "groove" )
-    name.grid(row=0, column = 0, sticky = N + S + E + W)
+    name.grid(row=0, column = 1, sticky = N + S + E + W)
 
     price = Label(pycrypto, text = "Price", bg = "#C38888", fg = "#F3B6B6", font="Lato 12 bold", padx="5", pady="5", borderwidth = 2, relief = "groove" )
-    price.grid(row = 0, column = 1, sticky = N + S + E + W)
+    price.grid(row = 0, column = 2, sticky = N + S + E + W)
 
     no_coins = Label(pycrypto, text = "Coin Owned", bg = "#915858", fg = "#F3B6B6", font="Lato 12 bold", padx="5", pady="5", borderwidth = 2, relief = "groove" )
-    no_coins.grid(row = 0, column = 2, sticky = N + S + E + W)
+    no_coins.grid(row = 0, column = 3, sticky = N + S + E + W)
 
     amount_paid = Label(pycrypto, text = "Total Amount Paid", bg = "#C38888", fg = "#F3B6B6", font="Lato 12 bold", padx="5", pady="5", borderwidth = 2, relief = "groove" )
-    amount_paid.grid(row = 0, column = 3, sticky = N + S + E + W)
+    amount_paid.grid(row = 0, column = 4, sticky = N + S + E + W)
 
     current_val = Label(pycrypto, text = "Current Value", bg = "#915858", fg = "#F3B6B6", font="Lato 12 bold", padx="5", pady="5", borderwidth = 2, relief = "groove" )
-    current_val.grid(row = 0, column = 4, sticky = N + S + E + W)
+    current_val.grid(row = 0, column = 5, sticky = N + S + E + W)
 
     pl_coin = Label(pycrypto, text = "P/L Per Coin", bg = "#C38888", fg = "#F3B6B6", font="Lato 12 bold", padx="5", pady="5", borderwidth = 2, relief = "groove" )
-    pl_coin.grid(row = 0, column = 5, sticky = N + S + E + W)
+    pl_coin.grid(row = 0, column = 6, sticky = N + S + E + W)
 
     totalpl = Label(pycrypto, text = "Total P/L With Coin", bg = "#915858", fg = "#F3B6B6", font="Lato 12 bold", padx="5", pady="5", borderwidth = 2, relief = "groove" )
-    totalpl.grid(row = 0, column = 6, sticky = N + S + E + W)
+    totalpl.grid(row = 0, column = 7, sticky = N + S + E + W)
 
 app_header()
 my_portfolio()
