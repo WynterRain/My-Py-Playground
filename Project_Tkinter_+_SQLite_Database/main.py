@@ -32,6 +32,7 @@ def my_portfolio():
     total_pl = 0
     coin_row = 1
     total_current_value = 0
+    total_amount_paid = 0
 
     for i in range(0, 300):
         for coin in coins:
@@ -41,8 +42,9 @@ def my_portfolio():
                 pl_percoin = api["data"][i]["quote"]["USD"]["price"] - coin[3]
                 total_pl_coin = pl_percoin * coin[2]
                 
-                total_pl = total_pl + total_pl_coin
-                total_current_value = total_current_value + current_value
+                total_pl += total_pl_coin
+                total_current_value += current_value
+                total_amount_paid += total_paid
                 
                 name = Label(pycrypto, text = api["data"][i]["symbol"], bg = "#B8A8A8", fg = "Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
                 name.grid(row = coin_row, column = 0, sticky = N + S + E + W)
@@ -66,6 +68,9 @@ def my_portfolio():
                 totalpl.grid(row = coin_row, column = 6, sticky = N + S + E + W)
                 
                 coin_row += 1
+
+    totalap = Label(pycrypto, text = "${0:.2f}".format(total_amount_paid), bg = "#B8A8A8", fg = "Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
+    totalap.grid(row = coin_row, column = 3, sticky = N + S + E + W)
                 
     totalcv = Label(pycrypto, text = "${0:.2f}".format(total_current_value), bg = "#B8A8A8", fg = "Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
     totalcv.grid(row = coin_row, column = 4, sticky = N + S + E + W)
@@ -76,8 +81,8 @@ def my_portfolio():
     
     api = ""
     
-    update = Button(pycrypto, text = "Update".format(total_pl), bg = "#915858", fg = "#F3B6B6", command = my_portfolio, font="Lato 12 bold", borderwidth = 2, relief = "groove", padx="2", pady="2")
-    update.grid(row = coin_row + 1, column = 6, sticky = N + S + E + W)
+    refresh = Button(pycrypto, text = "Refresh".format(total_pl), bg = "#915858", fg = "#F3B6B6", command = my_portfolio, font="Lato 12 bold", borderwidth = 2, relief = "groove", padx="2", pady="2")
+    refresh.grid(row = coin_row + 1, column = 6, sticky = N + S + E + W)
     
     
    
@@ -105,9 +110,8 @@ def app_header():
     totalpl = Label(pycrypto, text = "Total P/L With Coin", bg = "#915858", fg = "#F3B6B6", font="Lato 12 bold", padx="5", pady="5", borderwidth = 2, relief = "groove" )
     totalpl.grid(row = 0, column = 6, sticky = N + S + E + W)
 
-
+app_header()
 my_portfolio()
-
 pycrypto.mainloop()
 # print("Program Completed")
 
