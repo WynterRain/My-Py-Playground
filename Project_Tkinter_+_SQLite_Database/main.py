@@ -46,43 +46,46 @@ def my_portfolio():
                 total_current_value += current_value
                 total_amount_paid += total_paid
                 
+                portfolio_id = Label(pycrypto, text = coin[0], bg = "#B8A8A8", fg = "Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
+                portfolio_id.grid(row = coin_row, column = 0, sticky = N + S + E + W)
+                
                 name = Label(pycrypto, text = api["data"][i]["symbol"], bg = "#B8A8A8", fg = "Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
-                name.grid(row = coin_row, column = 0, sticky = N + S + E + W)
+                name.grid(row = coin_row, column = 1, sticky = N + S + E + W)
 
                 price = Label(pycrypto, text = "${0:.2f}".format(api["data"][i]["quote"]["USD"]["price"]), bg = "#B8A8A8", fg = "Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
-                price.grid(row = coin_row, column = 1, sticky = N + S + E + W)
+                price.grid(row = coin_row, column = 2, sticky = N + S + E + W)
 
                 no_coins = Label(pycrypto, text = coin[2], bg = "#B8A8A8", fg = "Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
-                no_coins.grid(row = coin_row, column = 2, sticky = N + S + E + W)
+                no_coins.grid(row = coin_row, column = 3, sticky = N + S + E + W)
 
                 amount_paid = Label(pycrypto, text = "${0:.2f}".format(total_paid), bg = "#B8A8A8", fg = "Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
-                amount_paid.grid(row = coin_row, column = 3, sticky = N + S + E + W)
+                amount_paid.grid(row = coin_row, column = 4, sticky = N + S + E + W)
 
                 current_val = Label(pycrypto, text = "${0:.2f}".format(current_value), bg = "#B8A8A8", fg ="Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
-                current_val.grid(row = coin_row, column = 4, sticky = N + S + E + W)
+                current_val.grid(row = coin_row, column = 5, sticky = N + S + E + W)
 
                 pl_coin = Label(pycrypto, text = "${0:.2f}".format(total_pl_coin), bg = "#B8A8A8", fg = font_color(float("{0:.2f}".format(pl_percoin))), font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
-                pl_coin.grid(row = coin_row, column = 5, sticky = N + S + E + W)
+                pl_coin.grid(row = coin_row, column = 6, sticky = N + S + E + W)
 
                 totalpl = Label(pycrypto, text = "${0:.2f}".format(total_pl_coin), bg = "#B8A8A8", fg = font_color(float("{0:.2f}".format(total_pl_coin))), font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
-                totalpl.grid(row = coin_row, column = 6, sticky = N + S + E + W)
+                totalpl.grid(row = coin_row, column = 7, sticky = N + S + E + W)
                 
                 coin_row += 1
 
     totalap = Label(pycrypto, text = "${0:.2f}".format(total_amount_paid), bg = "#B8A8A8", fg = "Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
-    totalap.grid(row = coin_row, column = 3, sticky = N + S + E + W)
+    totalap.grid(row = coin_row, column = 4, sticky = N + S + E + W)
                 
     totalcv = Label(pycrypto, text = "${0:.2f}".format(total_current_value), bg = "#B8A8A8", fg = "Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
-    totalcv.grid(row = coin_row, column = 4, sticky = N + S + E + W)
+    totalcv.grid(row = coin_row, column = 5, sticky = N + S + E + W)
     
     totalpl = Label(pycrypto, text = "${0:.2f}".format(total_pl), bg = "#B8A8A8", fg = font_color(float("{0:.2f}".format(total_pl))), font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
-    totalpl.grid(row = coin_row, column = 6, sticky = N + S + E + W)
+    totalpl.grid(row = coin_row, column = 7, sticky = N + S + E + W)
     
     
     api = ""
     
     refresh = Button(pycrypto, text = "Refresh".format(total_pl), bg = "#915858", fg = "#F3B6B6", command = my_portfolio, font="Lato 12 bold", borderwidth = 2, relief = "groove", padx="2", pady="2")
-    refresh.grid(row = coin_row + 1, column = 6, sticky = N + S + E + W)
+    refresh.grid(row = coin_row + 1, column = 7, sticky = N + S + E + W)
     
     
    
