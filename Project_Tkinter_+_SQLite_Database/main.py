@@ -35,6 +35,10 @@ def my_portfolio():
     def update_coin():
         cursorObj.execute("UPDATE coin SET symbol = ?, price = ?, amount = ? WHERE id = ?", (symbol_update.get(), price_update.get(), amount_update.get(), portid_update.get()))
         con.commit()
+        
+    def delete_coin():
+        cursorObj.execute("DELETE FROM coin WHERE id = ?", (portid_delete.get(),))
+        con.commit()
     
     total_pl = 0
     coin_row = 1
@@ -109,7 +113,12 @@ def my_portfolio():
     update_coin_txt.grid(row = coin_row + 2, column = 4, sticky = N + S + E + W)
     
     
+    # Delete Coin
+    portid_delete = Entry(pycrypto, borderwidth = 2, relief = "groove")
+    portid_delete.grid(row = coin_row + 3, column = 0)
     
+    delete_coin_txt = Button(pycrypto, text = "Delete Coin".format(total_pl), bg = "#915858", fg = "#F3B6B6", command = delete_coin, font="Lato 12 bold", borderwidth = 2, relief = "groove", padx="2", pady="2")
+    delete_coin_txt.grid(row = coin_row + 3, column = 4, sticky = N + S + E + W)
     #
 
     totalap = Label(pycrypto, text = "${0:.2f}".format(total_amount_paid), bg = "#B8A8A8", fg = "Black", font="Lato 12", borderwidth = 2, relief = "groove", padx="2", pady="2")
