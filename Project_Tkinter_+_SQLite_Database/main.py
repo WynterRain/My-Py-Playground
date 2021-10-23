@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox, Menu
 import requests 
 import json
 import sqlite3
@@ -20,6 +21,8 @@ def reset():
     app_header()
     my_portfolio()
 
+
+
 def my_portfolio():
     
     api_request = requests.get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=300&convert=USD&CMC_PRO_API_KEY=b2836bb2-a6a2-45e3-80a7-14a3810fe1e6")
@@ -38,16 +41,22 @@ def my_portfolio():
     def insert_coin():
         cursorObj.execute("INSERT INTO coin(symbol, price, amount) VALUES(?, ?, ?)", (symbol_txt.get(), price_txt.get(), amount_txt.get()))
         con.commit()
+        
+        messagebox.showinfo("Portfolio Notification", "Coin Added To Portfolio Successfully!")
         reset()
     
     def update_coin():
         cursorObj.execute("UPDATE coin SET symbol = ?, price = ?, amount = ? WHERE id = ?", (symbol_update.get(), price_update.get(), amount_update.get(), portid_update.get()))
         con.commit()
+        
+        messagebox.showinfo("Portfolio Notification", "Coin Updated Successfully!")
         reset()
         
     def delete_coin():
         cursorObj.execute("DELETE FROM coin WHERE id = ?", (portid_delete.get(),))
         con.commit()
+        
+        messagebox.showinfo("Portfolio Notification", "Coin Deleted From Portfolio")
         reset()
     
     total_pl = 0
