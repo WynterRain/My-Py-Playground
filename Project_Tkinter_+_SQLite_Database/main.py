@@ -17,11 +17,30 @@ con.commit()
 def reset():
     for cell in pycrypto.winfo_children():
         cell.destroy()
-        
+    
+    app_nav()    
     app_header()
     my_portfolio()
 
-
+def app_nav():
+    def clear_all():
+        cursorObj.execute("DELETE FROM coin")
+        con.commit()
+        
+        messagebox.showinfo("Portfolio Notification", "Portfolio Cleared - Add New Coins")
+        reset()
+        
+    def close_app():
+        pycrypto.destroy()
+        
+    menu = Menu(pycrypto)
+    file_item = Menu(menu)
+    file_item.add_command(label='Clear Portfolio', command = clear_all)
+    file_item.add_command(label='Close App', command = close_app)
+    menu.add_cascade(label="File", menu = file_item)
+    
+    
+    pycrypto.config(menu=menu)
 
 def my_portfolio():
     
@@ -184,6 +203,7 @@ def app_header():
     totalpl = Label(pycrypto, text = "Total P/L With Coin", bg = "#915858", fg = "#F3B6B6", font="Lato 12 bold", padx="5", pady="5", borderwidth = 2, relief = "groove" )
     totalpl.grid(row = 0, column = 7, sticky = N + S + E + W)
 
+app_nav()
 app_header()
 my_portfolio()
 pycrypto.mainloop()
