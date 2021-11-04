@@ -3,11 +3,14 @@ from bs4 import BeautifulSoup
 import time
 import csv
 import send_mail
+from datetime import date
 
 urls = ["https://finance.yahoo.com/quote/AMZN?p=AMZN&.tsrc=fin-srch", "https://finance.yahoo.com/quote/GOOGL?p=GOOGL&.tsrc=fin-srch", "https://finance.yahoo.com/quote/MSFT?p=MSFT&.tsrc=fin-srch"]
 headers = {'User-Agent' : 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'}
 
-csv_file = open("scrape.csv", "w")
+today = str(date.today()) + ".csv"
+
+csv_file = open(today, "w")
 csv_writer = csv.writer(csv_file)
 csv_writer.writerow(['Stock Name', 'Current Price', 'Previous Close', 'Open', 'Bid', 'Ask', 'Day Range', '52 Week Range', 'Volume', 'Avg. Volume' ])
 
@@ -35,4 +38,4 @@ for url in urls:
     
 csv_file.close()
 
-send_mail.send(filename="scrape.csv")
+send_mail.send(filename=today)
