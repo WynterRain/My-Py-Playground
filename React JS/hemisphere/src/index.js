@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import HemisphereDisplay from './HemisphereDisplay';
 
 
 class App extends React.Component {
 
-    constructor(props) {
-        super(props)
+    
 
-        this.state = { latitude: null, errorMessage: '' }
+    state = { latitude: null, errorMessage: '' }
 
+    componentDidMount() {
         window.navigator.geolocation.getCurrentPosition(
             (position) => {
                 this.setState({latitude: position.coords.latitude})
@@ -25,7 +26,7 @@ class App extends React.Component {
         }
 
         if(!this.state.errorMessage && this.state.latitude) {
-            return <div> {this.state.latitude} </div>
+            return <div> <HemisphereDisplay latitude = {this.state.latitude} />  </div>
         }
     
         else {
@@ -48,7 +49,7 @@ ReactDOM.render(
 // State Rules
 // - Only usable withh class components
 // 'State' is a JS object that contains data relevant to a component
-// Updating state on a component causes the component to reerender
+// Updating state on a component causes the component to rerender
 // State must be initialized when a component is created
 // State can only be updated using the function 'setState'
 
