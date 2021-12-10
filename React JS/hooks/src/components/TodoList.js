@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import AddNewTodo from './AddNewTodo'
 
+
 const TodoList = () => {
   const [todos, setTodos] = useState([
     //  ^ thing with value
@@ -13,10 +14,10 @@ const TodoList = () => {
       text: 'Get The 20 Million Packets Of Udon From Outside That KayB Ordered For Me',
       id: 2,
     },
-    { text: 'Eat All The Udon and REPEAT' },
+    { text: 'Eat All The Udon and REPEAT', id:3, },
   ])
 
-  const [count, setCount] = useState(0) // 0 is innitial value!
+  const [count, setCount] = useState(0) // 0 is initial value!
 
   const addTodo = (text) => {
     setTodos([
@@ -30,7 +31,8 @@ const TodoList = () => {
   useEffect(() => {
     // runs whenever component rerenders or renders (also can use as many times as needed)
     console.log('use effect', todos)
-  }, [todos]) // 2nd params makes it so it runs when the todos function changes, NOT click score button
+
+  },[count]) // 2nd params makes it so it runs when the todos function changes, NOT click score button
 
   useEffect(() => {
     // runs whenever component rerenders or renders (also can use as many times as needed)
