@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from '../contexts/ThemeContext'
-import { TodoListContext } from '../contexts/TodoListContext';
-
+import { TodoListContext } from '../contexts/TodoListContext'
 
 // class TodoList extends React.Component {
 //     static contextType = ThemeContext
@@ -20,7 +19,7 @@ import { TodoListContext } from '../contexts/TodoListContext';
 // }
 
 const TodoList = () => {
-  const { todos } = useContext(TodoListContext);
+  const { todos } = useContext(TodoListContext)
   const { isDarkTheme, lightTheme, darkTheme, changeTheme } =
     useContext(ThemeContext)
   const theme = isDarkTheme ? darkTheme : lightTheme
@@ -34,15 +33,17 @@ const TodoList = () => {
         textAlign: ' center',
       }}
     >
-      {
-        todos.length ? (
-          todos.map((todo) => {
-            return <p key = {todo.id} className = 'item'>{todo.text}</p>
-          })
-        ) : (
-          <div>No Todos</div>
-        )
-      }
+      {todos.length ? (
+        todos.map((todo) => {
+          return (
+            <p key={todo.id} className="item">
+              {todo.text}
+            </p>
+          )
+        })
+      ) : (
+        <div>No Todos</div>
+      )}
       {/* <p className = 'item'>Heona</p>
       <p className = 'item'>Wowo</p>
       <p className = 'item'>KayB Balaybee</p> */}
