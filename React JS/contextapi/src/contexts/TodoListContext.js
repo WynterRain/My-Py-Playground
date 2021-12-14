@@ -9,8 +9,21 @@ const TodoListContextProvider = ({ children }) => {
     { text: 'KayB', id: 3 },
   ])
 
+  const addTodo = (todo) => {
+    setTodos([...todos, { text: todo, id: Math.random() }])
+  }
+
+  const removeTodo = (id) => {
+    setTodos(
+      todos.filter((todo) => {
+        //     ^  cycles through each item in array and check conditions
+        return todo.id !== Number(id)
+      }),
+    )
+  }
+
   return (
-    <TodoListContext.Provider value={{ todos }}>
+    <TodoListContext.Provider value={{ todos, addTodo, removeTodo }}>
       {children}
     </TodoListContext.Provider>
   )

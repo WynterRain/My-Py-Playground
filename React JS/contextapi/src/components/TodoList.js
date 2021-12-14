@@ -1,4 +1,5 @@
-import React, { useContext } from 'react'
+import React, { useContext  } from 'react'
+import { useState } from 'react/cjs/react.development'
 import { ThemeContext } from '../contexts/ThemeContext'
 import { TodoListContext } from '../contexts/TodoListContext'
 
@@ -19,24 +20,38 @@ import { TodoListContext } from '../contexts/TodoListContext'
 // }
 
 const TodoList = () => {
-  const { todos } = useContext(TodoListContext)
+  const [todo, setTodo] = useState('');
+
+  const { todos, addTodo, removeTodo } = useContext(TodoListContext)
   const { isDarkTheme, lightTheme, darkTheme, changeTheme } =
     useContext(ThemeContext)
   const theme = isDarkTheme ? darkTheme : lightTheme
+  const handleChange = (e) => {
+    setTodo(e.target.value)
+  }
 
+  const handleFormSubmit = (e) => {
+    e.preventDefault()
+    addTodo(todo)
+  }
+
+  const handleRemoveTodo = (e) => {
+    const id = e.target.id
+    removeTodo(id);
+  }
   return (
     <div
       style={{
         background: theme.background,
         color: theme.text,
-        height: '140px',
+        
         textAlign: ' center',
       }}
     >
       {todos.length ? (
         todos.map((todo) => {
           return (
-            <p key={todo.id} className="item">
+            <p id = {todo.id} onClick = {handleRemoveTodo} key={todo.id} className="item">
               {todo.text}
             </p>
           )
@@ -47,7 +62,11 @@ const TodoList = () => {
       {/* <p className = 'item'>Heona</p>
       <p className = 'item'>Wowo</p>
       <p className = 'item'>KayB Balaybee</p> */}
-
+      <form onSubmit={handleFormSubmit}>
+        <label htmlFor='todo'>Add A New Todo:</label>
+        <input type = 'text' id = 'todo' onChange={handleChange} />
+        <input type = 'submit' value = 'Add New Todo' className = 'ui button primary' />
+      </form>
       <button className="ui button primary" onClick={changeTheme}>
         Change Theme
       </button>
