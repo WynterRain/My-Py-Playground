@@ -36,3 +36,27 @@ console.log(int_1 <= int_2) // <= check less than or equal to/ greater than or e
 
 console.log(undefined_var == null_var) // both have the same value with having the lack of a value so it's TRUE
 
+// functions
+
+function sayHello() {
+    console.log("helloo")
+}
+
+sayHello()
+
+// functions - exercise
+
+function my_name_exer() {
+    console.log("Heona")
+}
+
+my_name_exer()
+
+function sum(numb1, numb2) {
+    sum = numb1 + numb2
+
+    return numb1
+}
+
+let s = sum(1,2)
+console.log(s)
