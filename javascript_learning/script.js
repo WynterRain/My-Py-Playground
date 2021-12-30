@@ -60,3 +60,47 @@
 
 // let s = sum(1,2)
 // console.log(s)
+
+// function sumcallback(a,b,callback) {
+//     callback(a+b)
+// }
+
+// function handlesum(sum) {
+//     console.log(sum)
+// }
+
+// sumcallback(1,2,handlesum )
+
+
+// function sum(a,b) {
+//     return a + b
+// }
+
+// let sumArrow = (a, b) => {
+//     return a+b
+// }
+
+// // let sumArrow = (a, b) => a+b   // << this is also equal to ^
+
+
+// // exercise - 1
+
+// let printName = (myName) => {
+//     console.log(myName)
+// }
+
+// printName("Heona")
+
+// // exercise -2 
+
+// let printHi = name => "Hi " + name
+
+// console.log(printHi("mei"))
+
+// hoisting
+
+function sum(a,b) {
+    return a+b
+}
+
+console.log(sum(1,2))
