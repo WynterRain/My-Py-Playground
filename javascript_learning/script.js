@@ -109,3 +109,31 @@
 
 // comment - hoisting moves all your functions to the very top.. so if you put your function AFTER it is called; will still work
 // comment - hoisting DOES NOT WORK with arrow functions (LET VARIABLES DO NOT GET HOISTED)
+
+
+
+// comment -  idea of scope
+
+// function sayHi(name) {
+//     let result = "Hi " + name + a
+//     console.log(result)
+// }
+// let a =1
+
+
+// sayHi("me")
+
+
+// comment - closures
+
+        
+
+function print(variable) {
+    return function func(variable2) {
+        console.log(variable)
+        console.log(variable2)
+    }
+}
+
+let a = print(1)
+a(2)
