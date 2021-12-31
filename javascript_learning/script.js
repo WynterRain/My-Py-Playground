@@ -141,3 +141,17 @@
 // comment - new types of variables
 
 // comment - const = can not redefine the value... IT IS CONSTANT
+// comment - var = not reccomemnded [var is available EVERYWHERE-- breaks scoping rules.] - does hoisting 
+
+// comment - type coersion
+
+let a = "1"
+console.log(a) // << string
+console.log(typeof a)
+
+// comment - parseInt < turn into an int
+// comment - parseFloat < turn into an float
+// comment - x.toString() < turn into an string -- x = variable
+
+let intA = parseInt(a)
+console.log(typeof intA)
