@@ -204,3 +204,74 @@ because NaN is NEVER EQUAL TO ANYTHING!! */
 
 
 // OBJECTS ________________________________
+
+
+
+// let person = {
+//     name : "Heona", 
+//     age: 13, 
+//     favNumber : 7,
+//     sayHi: function () {
+//         console.log("hi")
+//     },
+    
+// }
+
+let egFunc = { 
+    sayHi: function () {
+        console.log("hi")
+    },
+// comment -  ^ and v are the same thing but v is what people prefer
+    sayHi2() {
+        console.log("hi ver2")
+    }
+    
+}
+
+// person.sayHi() // comment - [array].[key] (then prints the value)
+// console is actually a objec
+egFunc.sayHi2()
+
+
+// exercise -------
+
+let car = {
+    make : "Subaru",
+    model : "W0w0",
+    isUsed : false,
+    makeNoise() {
+        console.log("vroom")
+    }
+}
+
+console.log(car.make) // comment - equivelent to console.log(car["make"])
+console.log(car.model)
+console.log(car.isUsed)
+console.log(car.makeNoise())
+
+let person = {
+    name : "Heona", 
+    hobby : ["pinano", "math"],
+    adderss : {
+        street : '2121 wowo st',
+        city: "wowo love town"
+    }
+    
+}
+
+console.log(person.hobby[0])
+console.log(person.adderss.city)
+
+// exercise....
+
+let book = {
+    title : "meimei is best wowo caretaker",
+    author : {
+        authName : "Heona",
+        age : "13"
+    }
+
+}
+
+// modify properties 
+book.title = "best wowo in da world"
