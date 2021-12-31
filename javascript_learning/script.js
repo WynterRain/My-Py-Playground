@@ -138,3 +138,6 @@
 // let a = print(1)
 // a(2)
 
+// comment - new types of variables
+
+// comment - const = can not redefine the value... IT IS CONSTANT
