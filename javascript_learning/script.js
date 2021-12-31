@@ -145,13 +145,30 @@
 
 // comment - type coersion
 
-let a = "1"
-console.log(a) // << string
-console.log(typeof a)
+// let a = "1"
+// console.log(a) // comment - << string
+// console.log(typeof a)
 
 // comment - parseInt < turn into an int
 // comment - parseFloat < turn into an float
 // comment - x.toString() < turn into an string -- x = variable
 
-let intA = parseInt(a)
-console.log(typeof intA)
+// let intA = parseInt(a)
+// console.log(typeof intA)
+
+// comment - === => tells java script not to convert the type
+// const a = 1
+// const b =2
+// console.log(a !== b)
+
+// comment - side effects of type coersion + NaN (NOT A NUMBER)
+// const a = parseInt("asdfd")
+
+// console.log(parseInt(a)) // comment - this will result in NaN because asdfd is NOT a real NUMBER
+/* console.log((a) == NaN) 
+              or
+console.log((a) === NaN ) is ALWAYS FALSE  
+because NaN is NEVER EQUAL TO ANYTHING!! */
+
+// comment - to check if not a number us console.log(isNaN(a)) << will return true
+
