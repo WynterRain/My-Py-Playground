@@ -100,12 +100,12 @@
 // comment -  hoisting
 
 
-function sum(a,b) {
-    return a+b
-}
+// function sum(a,b) {
+//     return a+b
+// }
  
  
-console.log(sum(1,2))
+// console.log(sum(1,2))
 
 // comment - hoisting moves all your functions to the very top.. so if you put your function AFTER it is called; will still work
 // comment - hoisting DOES NOT WORK with arrow functions (LET VARIABLES DO NOT GET HOISTED)
