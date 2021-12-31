@@ -172,3 +172,35 @@ because NaN is NEVER EQUAL TO ANYTHING!! */
 
 // comment - to check if not a number us console.log(isNaN(a)) << will return true
 
+//-0-------- comment - arrays
+
+// const a = [1,2,3,4,5,6,7,8,9,10]
+// console.log(a[2]) // comment - just like python
+
+//a.push(11) // comment - like append but .push is to add element to the END of the list
+// a.push(["mei", "kay"]) // you can even add a list in side another list
+
+// exercise 1
+
+// const alpha = ["a","b","c","d","e","f"]
+
+// console.log(alpha[2])
+
+
+// exercise 2
+
+// const nestnumb = [
+//     [1,2,3,4,5],
+//     [6,7,8,9,10],
+//     [11,12,13,14,15]
+// ]
+
+// console.log(nestnumb[0][3])
+// console.log(nestnumb[1][2])
+// console.log(nestnumb[2][0])
+
+// const num = [1,2,3,4,5]
+// console.log(num.length) // commment- find the length of a array
+
+
+// OBJECTS ________________________________
