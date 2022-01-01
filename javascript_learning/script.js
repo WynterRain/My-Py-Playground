@@ -384,3 +384,30 @@
 // let ln = "Liu"
 
 // console.log(`${fn} ${ln}`)
+
+// function createUser(name, age) {
+//     return {name: name, age : age }
+// }
+
+
+// class User {
+//     constructor(name, age) {
+//         this.name = name
+//         this.age = 13
+//         this.human = true
+//     }
+
+//     printName() {
+//         console.log(this.name)
+//     }
+// }
+
+// const user = new User("Heona", 13)
+// const user2 = new User("bb", 13)
+// const userFun = createUser("mei",13)
+// user.printName()
+// console.log(user)
+// console.log(userFun)
+// user.printName()
+// user2.printName()
+
