@@ -217,61 +217,84 @@ because NaN is NEVER EQUAL TO ANYTHING!! */
     
 // }
 
-let egFunc = { 
-    sayHi: function () {
-        console.log("hi")
-    },
-// comment -  ^ and v are the same thing but v is what people prefer
-    sayHi2() {
-        console.log("hi ver2")
-    }
+// let egFunc = { 
+//     sayHi: function () {
+//         console.log("hi")
+//     },
+// // comment -  ^ and v are the same thing but v is what people prefer
+//     sayHi2() {
+//         console.log("hi ver2")
+//     }
     
-}
+// }
 
-// person.sayHi() // comment - [array].[key] (then prints the value)
-// console is actually a objec
-egFunc.sayHi2()
+// // person.sayHi() // comment - [array].[key] (then prints the value)
+// // console is actually a objec
+// egFunc.sayHi2()
 
 
-// exercise -------
+// // exercise -------
 
-let car = {
-    make : "Subaru",
-    model : "W0w0",
-    isUsed : false,
-    makeNoise() {
-        console.log("vroom")
-    }
-}
+// let car = {
+//     make : "Subaru",
+//     model : "W0w0",
+//     isUsed : false,
+//     makeNoise() {
+//         console.log("vroom")
+//     }
+// }
 
-console.log(car.make) // comment - equivelent to console.log(car["make"])
-console.log(car.model)
-console.log(car.isUsed)
-console.log(car.makeNoise())
+// console.log(car.make) // comment - equivelent to console.log(car["make"])
+// console.log(car.model)
+// console.log(car.isUsed)
+// console.log(car.makeNoise())
 
-let person = {
-    name : "Heona", 
-    hobby : ["pinano", "math"],
-    adderss : {
-        street : '2121 wowo st',
-        city: "wowo love town"
-    }
+// let person = {
+//     name : "Heona", 
+//     hobby : ["pinano", "math"],
+//     adderss : {
+//         street : '2121 wowo st',
+//         city: "wowo love town"
+//     }
     
-}
+// }
 
-console.log(person.hobby[0])
-console.log(person.adderss.city)
+// console.log(person.hobby[0])
+// console.log(person.adderss.city)
 
 // exercise....
 
-let book = {
-    title : "meimei is best wowo caretaker",
-    author : {
-        authName : "Heona",
-        age : "13"
-    }
+// let book = {
+//     title : "meimei is best wowo caretaker",
+//     author : {
+//         authName : "Heona",
+//         age : "13"
+//     }
 
-}
+// }
 
 // modify properties 
-book.title = "best wowo in da world"
+// book.title = "best wowo in da world"
+
+// references and vals ----------------
+
+// let a = 10
+// let b = "Hi"
+// let c = [1,2] // comment = location x
+// // let d = c // -comment --- also points to  x location
+// // therefore if c or d changes then they BOTH change
+// d = [3,4,5] // comment - creates a new location in memory
+// let e = {mName = "mei"}
+// console.log("a="+a)
+// console.log("b="+b)
+// console.log("c="+c)
+// console.log("d="+d)
+// console.log("e="+ JSON.stringify(e)) // turns object in a readable string
+
+const a = [1,2]
+const b = [1,2]
+
+// you can do a.push(xyz) because you are adding to it even if its a const!!!
+// const error will only occur when you REDEFINE the whole variable... not push it
+
+console.log(a === b) // comment - returns FALSE because they are comparing memory adresses.. and 2 seprate arrays even though they have the same value are NOT the same!!
