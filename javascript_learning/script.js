@@ -370,3 +370,17 @@
 // console.log(total)
 
 // a.includes(2) // comment -does a include xyz... and wil return true or false
+
+// comment -sepreate way to define strings
+
+// let a = "Hello" // comment - you can also use backticks to define strings
+// let b = 'world'
+
+// console.log(a)
+// console.log(`${a} ${b}`)
+
+// // comment - exercise 
+// let fn = "Heona"
+// let ln = "Liu"
+
+// console.log(`${fn} ${ln}`)
