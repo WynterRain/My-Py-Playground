@@ -291,10 +291,82 @@ because NaN is NEVER EQUAL TO ANYTHING!! */
 // console.log("d="+d)
 // console.log("e="+ JSON.stringify(e)) // turns object in a readable string
 
-const a = [1,2]
-const b = [1,2]
+// const a = [1,2]
+// const b = [1,2]
 
 // you can do a.push(xyz) because you are adding to it even if its a const!!!
 // const error will only occur when you REDEFINE the whole variable... not push it
 
-console.log(a === b) // comment - returns FALSE because they are comparing memory adresses.. and 2 seprate arrays even though they have the same value are NOT the same!!
+// console.log(a === b) // comment - returns FALSE because they are comparing memory adresses.. and 2 seprate arrays even though they have the same value are NOT the same!!
+
+
+
+// comment -array methods
+
+const a = [1,2,3,4,5]
+const b = [2,4,6,8,10]
+
+a.forEach((number, indexz) => { // comment - LIK E A FOR LO0OASODASFPOP
+    console.log(number + " " + indexz)
+})
+
+const newA =    a.map(number => {
+    return number * 2 // comment -does operations wwith and arratyg!!!
+
+})
+
+console.log(newA)
+
+
+const newfilter = a.filter(number  =>  {
+    return number <=2 // comment -will only  return if it is true..l/.
+})
+
+console.log(newfilter)
+
+
+
+
+const n = a.find(number => { //comment -ashows the fi rst one that matyches the scenario...l and st op executinjgl...
+    return number > 2
+})
+
+
+console.log(n)
+
+const somecheck = a.some(number => {
+    return number > 2 // comment -will return true or false if at least one of  the elements kis greater than 2!!
+})
+
+console.log(somecheck)
+
+const everycheck = a.every(number => {
+    return number > 2 // comment -will return true or false IF EVERY number matches the statement
+})
+
+console.log(everycheck)
+
+const sum = a.reduce((sum, number) => {
+a.includes(2) // comment -does a include xyz... and wil return true or false
+    return sum + number // comment -0 + 1 = 1 = newsum then 1 + 2 = 3 = newsum2 then 3 + 3 = 6 newsum3 then 6 + 4 = 10 = newsum then 10 + 5 = 15 = value!!
+}, 0) // 0 = default for sum ;
+
+console.log(sum)
+
+
+// comment -exercise
+const items = [
+    { price : 10 },
+    { price : 20 },
+    { price : 14 },
+    { price : 1 },
+    { price : 6 },
+]
+
+const total = items.reduce((sum, item) => {
+    return sum + item.price
+},  0)
+
+console.log(total)
+
+a.includes(2) // comment -does a include xyz... and wil return true or false
