@@ -1,6 +1,12 @@
 {
   "products": [
     {
+      "id": "big-cheese",
+      "name": "Big Cheese",
+      "description": "Large burger, all the cheese.",
+      "price": 749
+    },
+    {
       "id": "the-wedge",
       "name": "The Wedge",
       "description": "Tasty sandwich to max your tastebuds.",
@@ -10,7 +16,7 @@
       "id": "spice-dog",
       "name": "Spice Dog",
       "description": "Prepare the spice, it's very nice.",
-      "price": 799
+      "price": 699
     },
     {
       "id": "french-fries",
@@ -41,12 +47,6 @@
       "name": "Wild Water",
       "description": "Spring water, wild and watery.",
       "price": 299
-    },
-    {
-      "id": "big-cheese",
-      "name": "Big Cheese",
-      "price": 899,
-      "description": "Large burger, all the cheese."
     }
   ]
 }
